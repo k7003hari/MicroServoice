@@ -61,7 +61,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> getAllProductsBetween(int initialPrice, int finalPrice) {
-		return repository.findByproductPriceBetween(initialPrice, finalPrice);
+		return repository.findByproductPriceBetween(0, 0);
 	}
 
 	@Override

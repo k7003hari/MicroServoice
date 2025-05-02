@@ -17,8 +17,7 @@ import com.cts.exception.ProductNotFound;
 import com.cts.model.Product;
 import com.cts.service.ProductService;
 
-@RestController
-@RequestMapping("/products") // http://localhost:8080/products
+@RestController@RequestMapping("/products") // http://localhost:8080/products
 public class ProductController {
 	@Autowired
 	ProductService service;
@@ -54,8 +53,7 @@ public class ProductController {
 	}
 
 	@GetMapping("/getAllProductBetween/{p1}/{p2}") // http://localhost:1111/products/getAllProductBetween/1/2
-	public List<Product> getAllProductsBetween(@PathVariable("p1") int initialPrice,
-			@PathVariable("p2") int FinalPrice) {
+	public List<Product> getAllProductsBetween(@PathVariable("p1") int initialPrice,@PathVariable("p2") int FinalPrice) {
 		return service.getAllProductsBetween(initialPrice, FinalPrice);
 	}
 
